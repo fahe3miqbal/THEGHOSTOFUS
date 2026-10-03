@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aadil ❤️ Kashish</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --pink:#ff4d8d;
+    --light:#ff9fc3;
+    --red:#ff285f;
+    --white:#fff;
+    --glass:rgba(255,255,255,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050008;
+    color:white;
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ================= CURSOR ================= */
+
+.cursor{
+    position:fixed;
+    width:18px;
+    height:18px;
+    border:1px solid rgba(255,100,160,.8);
+    border-radius:50%;
+    pointer-events:none;
+    z-index:9999;
+    transform:translate(-50%,-50%);
+    transition:.08s;
+}
+
+.cursor-dot{
+    position:fixed;
+    width:5px;
+    height:5px;
+    background:#ff6b9d;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:9999;
+    transform:translate(-50%,-50%);
+}
+
+/* ================= LOADER ================= */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#050008;
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    transition:1s;
+}
+
+.loader-heart{
+    font-size:70px;
+    animation:heartbeat 1s infinite;
+}
+
+.loader p{
+    margin-top:20px;
+    letter-spacing:5px;
+    font-size:11px;
+    color:#ff9fc3;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.25)}
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 50% 40%,rgba(255,30,100,.22),transparent 30%),
+    radial-gradient(circle at 10% 90%,rgba(110,0,255,.18),transparent 30%),
+    #050008;
+}
+
+.stars{
+    position:absolute;
+    inset:0;
+    background-image:
+    radial-gradient(#fff 1px,transparent 1px),
+    radial-gradient(#ff80ab 1px,transparent 1px);
+    background-size:90px 90px,140px 140px;
+    background-position:0 0,40px 70px;
+    opacity:.35;
+    animation:starsMove 25s linear infinite;
+}
+
+@keyframes starsMove{
+    to{background-position:300px 300px,-300px -300px}
+}
+
+.hero-content{
+    position:relative;
+    z-index:3;
+    padding:30px;
+}
+
+.small-title{
+    letter-spacing:7px;
+    font-size:12px;
+    color:#ff9fc3;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(70px,13vw,170px);
+    font-weight:500;
+    line-height:.8;
+    background:linear-gradient(
+        120deg,
+        #fff,
+        #ff9fc3,
+        #ff3e79,
+        #fff
+    );
+    background-size:300%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:gradient 7s infinite;
+}
+
+@keyframes gradient{
+    0%{background-position:0}
+    50%{background-position:100%}
+    100%{background-position:0}
+}
+
+.and{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    color:#ff628f;
+    margin:20px 0;
+}
+
+.hero-sub{
+    margin-top:35px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    color:#eee;
+    font-style:italic;
+}
+
+.scroll{
+    margin-top:70px;
+    font-size:10px;
+    letter-spacing:4px;
+    color:#aaa;
+}
+
+.scroll span{
+    display:block;
+    width:1px;
+    height:55px;
+    background:#ff4d8d;
+    margin:15px auto;
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:20px;
+    animation:floatUp linear forwards;
+    pointer-events:none;
+    z-index:2;
+}
+
+@keyframes floatUp{
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:130px 7%;
+    position:relative;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title span{
+    color:#ff6b9d;
+    font-size:11px;
+    letter-spacing:5px;
+}
+
+.section-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:65px;
+    font-weight:500;
+    margin-top:15px;
+}
+
+/* ================= LOVE LETTER ================= */
+
+.letter-section{
+    background:
+    linear-gradient(rgba(5,0,8,.8),rgba(5,0,8,.95)),
+    radial-gradient(circle at 50% 0,#5b002d,transparent 50%);
+}
+
+.letter{
+    max-width:800px;
+    margin:auto;
+    padding:60px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,100,150,.2);
+    border-radius:30px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 80px rgba(255,0,90,.08);
+}
+
+.letter p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    line-height:1.8;
+    color:#eee;
+}
+
+.signature{
+    margin-top:40px;
+    text-align:right;
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    color:#ff78a6;
+}
+
+/* ================= REASONS ================= */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    padding:40px 30px;
+    min-height:230px;
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.035);
+    border-radius:25px;
+    transition:.5s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:#ff276d;
+    filter:blur(90px);
+    opacity:.15;
+    top:-50px;
+    right:-50px;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    border-color:rgba(255,80,140,.5);
+    box-shadow:0 20px 50px rgba(255,0,90,.15);
+}
+
+.card .number{
+    font-size:12px;
+    color:#ff6b9d;
+    letter-spacing:3px;
+}
+
+.card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    margin:25px 0 12px;
+}
+
+.card p{
+    color:#aaa;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* ================= MEMORIES ================= */
+
+.memories{
+    background:#080009;
+}
+
+.memory-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.memory{
+    height:350px;
+    border-radius:25px;
+    overflow:hidden;
+    position:relative;
+    background:
+    linear-gradient(135deg,#2b0019,#11000d);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.memory:nth-child(2){
+    transform:translateY(40px);
+}
+
+.memory:nth-child(5){
+    transform:translateY(40px);
+}
+
+.memory::after{
+    content:"♡";
+    position:absolute;
+    font-size:100px;
+    color:rgba(255,255,255,.06);
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.memory .caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px;
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
+    z-index:2;
+}
+
+.caption h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+}
+
+.caption p{
+    color:#aaa;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* ================= QUESTION ================= */
+
+.question{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    radial-gradient(circle,#390019,transparent 55%),
+    #050008;
+}
+
+.question h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(50px,8vw,100px);
+    line-height:.95;
+}
+
+.question h2 span{
+    color:#ff4d8d;
+}
+
+.buttons{
+    margin-top:50px;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:17px 40px;
+    border-radius:100px;
+    border:1px solid #ff4d8d;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    font-family:'Montserrat';
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ff4d8d;
+    box-shadow:0 0 40px rgba(255,77,141,.5);
+}
+
+.yes{
+    background:#ff4d8d;
+}
+
+/* ================= FINAL ================= */
+
+.final{
+    text-align:center;
+    padding:150px 20px 100px;
+}
+
+.final-heart{
+    font-size:80px;
+    animation:heartbeat 1.5s infinite;
+}
+
+.final h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:70px;
+    margin:25px 0;
+}
+
+.final p{
+    color:#999;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+/* ================= WATERMARK ================= */
+
+.watermark{
+    position:fixed;
+    right:18px;
+    bottom:14px;
+    z-index:999;
+    font-size:9px;
+    letter-spacing:2px;
+    color:rgba(255,255,255,.35);
+    backdrop-filter:blur(5px);
+}
+
+/* ================= MUSIC ================= */
+
+.music{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    z-index:999;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:1px solid rgba(255,100,150,.5);
+    background:rgba(20,0,10,.7);
+    color:#ff80aa;
+    cursor:pointer;
+    font-size:18px;
+    backdrop-filter:blur(10px);
+}
+
+.music:focus-visible,
+.btn:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:4px;
+}
+
+@media (pointer:coarse){
+    .cursor,
+    .cursor-dot{
+        display:none;
+    }
+}
+
+/* ================= POPUP ================= */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(15px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9998;
+    padding:25px;
+}
+
+.popup-box{
+    max-width:550px;
+    text-align:center;
+    padding:60px 40px;
+    background:#12000c;
+    border:1px solid rgba(255,70,130,.5);
+    border-radius:30px;
+    box-shadow:0 0 100px rgba(255,0,100,.2);
+}
+
+.popup-box h2{
+    font-family:'Cormorant Garamond';
+    font-size:55px;
+}
+
+.popup-box p{
+    margin-top:20px;
+    line-height:1.8;
+    color:#bbb;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    section{
+        padding:90px 20px;
+    }
+
+    .hero h1{
+        font-size:80px;
+    }
+
+    .section-title h2{
+        font-size:50px;
+    }
+
+    .reasons{
+        grid-template-columns:1fr;
+    }
+
+    .memory-grid{
+        grid-template-columns:1fr;
+    }
+
+    .memory{
+        height:300px;
+    }
+
+    .memory:nth-child(2),
+    .memory:nth-child(5){
+        transform:none;
+    }
+
+    .letter{
+        padding:30px 25px;
+    }
+
+    .letter p{
+        font-size:20px;
+    }
+
+    .final h2{
+        font-size:50px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div class="loader" id="loader">
+    <div class="loader-heart">❤️</div>
+    <p>PREPARING SOMETHING SPECIAL...</p>
+</div>
+
+<!-- CURSOR -->
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- MUSIC -->
+
+<button class="music" onclick="toggleMusic()" id="musicBtn" aria-label="Play music" aria-pressed="false">♫</button>
+
+<audio id="musicAudio" loop>
+    <source src="love-song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="stars"></div>
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            A STORY WRITTEN IN THE STARS
+        </div>
+
+        <h1>Aadil</h1>
+
+        <div class="and">♡</div>
+
+        <h1>Kashish</h1>
+
+        <p class="hero-sub">
+            "Some people enter your life...<br>
+            and suddenly everything makes sense."
+        </p>
+
+        <div class="scroll">
+            SCROLL TO ENTER OUR STORY
+            <span></span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- LOVE LETTER -->
+
+<section class="letter-section">
+
+    <div class="section-title">
+
+        <span>A LETTER FROM AADIL</span>
+
+        <h2>For Kashish ❤️</h2>
+
+    </div>
+
+    <div class="letter">
+
+        <p id="letterText"></p>
+
+        <div class="signature">
+            — Yours, Aadil ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REASONS -->
+
+<section>
+
+    <div class="section-title">
+
+        <span>THERE ARE SO MANY...</span>
+
+        <h2>Reasons I Love You</h2>
+
+    </div>
+
+    <div class="reasons">
+
+        <div class="card">
+            <div class="number">01</div>
+            <h3>Your Smile</h3>
+            <p>
+                Your smile has this strange little magic
+                that can make even the worst day feel
+                a little better.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">02</div>
+            <h3>The Way You Are</h3>
+            <p>
+                I don't love you because you're perfect.
+                I love you because being yourself is
+                more beautiful than perfection.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">03</div>
+            <h3>Your Presence</h3>
+            <p>
+                Somehow, everything feels calmer when
+                you're around. Even silence feels special.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">04</div>
+            <h3>Your Heart</h3>
+            <p>
+                The kindness in you, the way you care,
+                and the little things you do mean more
+                than you probably realise.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">05</div>
+            <h3>Our Memories</h3>
+            <p>
+                Every little moment with you becomes
+                something I secretly want to remember forever.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">06</div>
+            <h3>Simply You</h3>
+            <p>
+                If I had to choose again, knowing everything,
+                I'd still choose you.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MEMORIES -->
+
+<section class="memories">
+
+    <div class="section-title">
+
+        <span>OUR LITTLE UNIVERSE</span>
+
+        <h2>Memories</h2>
+
+    </div>
+
+    <div class="memory-grid">
+
+        <div class="memory">
+            <div class="caption">
+                <h3>The Beginning</h3>
+                <p>Where our story started.</p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="caption">
+                <h3>Your Smile</h3>
+                <p>The view I never get tired of.</p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="caption">
+                <h3>Little Moments</h3>
+                <p>The moments that became memories.</p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="caption">
+                <h3>Us</h3>
+                <p>Two people. One beautiful story.</p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="caption">
+                <h3>Forever</h3>
+                <p>A word that sounds better with you.</p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="caption">
+                <h3>My Favourite Person</h3>
+                <p>Always will be.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUESTION -->
+
+<section class="question">
+
+    <div>
+
+        <div class="small-title">
+            ONE LAST QUESTION...
+        </div>
+
+        <h2>
+            Kashish,<br>
+            <span>will you stay?</span>
+        </h2>
+
+        <div class="buttons">
+
+            <button class="btn yes" onclick="yesClicked()">
+                YES ❤️
+            </button>
+
+            <button class="btn" id="noBtn" onmouseover="moveNo()">
+                NO
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div class="final-heart">❤️</div>
+
+    <h2>
+        Aadil × Kashish
+    </h2>
+
+    <p>
+        SOME STORIES ARE MEANT TO BE FELT, NOT JUST READ.
+    </p>
+
+</section>
+
+
+<!-- POPUP -->
+
+<div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+
+    <div class="popup-box">
+
+        <div style="font-size:60px;">💖</div>
+
+        <h2 id="popupTitle">Knew it.</h2>
+
+        <p>
+            Then here's my promise...
+            <br><br>
+            I'll keep choosing you,
+            in every version of tomorrow.
+            <br><br>
+            — Aadil ❤️
+        </p>
+
+        <button class="btn yes" onclick="closePopup()" style="margin-top:30px;">
+            Close ❤️
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- WATERMARK -->
+
+<div class="watermark">
+    MADE BY FAHEEM IQBAL
+</div>
+
+
+<script>
+
+/* ================= LOADER ================= */
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        document.getElementById("loader").style.opacity="0";
+
+        setTimeout(()=>{
+            document.getElementById("loader").style.display="none";
+        },1000);
+
+    },1800);
+
+});
+
+
+/* ================= CURSOR ================= */
+
+const cursor=document.getElementById("cursor");
+const dot=document.getElementById("cursorDot");
+
+document.addEventListener("mousemove",(e)=>{
+
+    cursor.style.left=e.clientX+"px";
+    cursor.style.top=e.clientY+"px";
+
+    dot.style.left=e.clientX+"px";
+    dot.style.top=e.clientY+"px";
+
+});
+
+
+/* ================= FLOATING HEARTS ================= */
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.className="heart";
+
+    const hearts=["❤️","💗","💖","💕","💘","🌹"];
+
+    heart.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.animationDuration=
+        (5+Math.random()*6)+"s";
+
+    heart.style.fontSize=
+        (12+Math.random()*20)+"px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },11000);
+
+}
+
+setInterval(createHeart,900);
+
+
+/* ================= TYPEWRITER ================= */
+
+const message = `
+Kashish,
+
+I don't know if words will ever be enough to explain
+what you mean to me.
+
+But if I had to try...
+
+I'd say that meeting you was one of those little moments
+that changed the direction of my entire story.
+
+You became my favourite notification,
+my favourite conversation,
+my favourite smile,
+and somehow... my favourite person.
+
+I don't promise that every day will be perfect.
+
+But I promise that I'll appreciate the imperfect days too.
+
+Because at the end of the day,
+I don't want a perfect story.
+
+I want ours.
+
+And if I could choose one person
+to write the next chapter with...
+
+I'd choose you.
+
+Always.
+
+❤️
+`;
+
+let index=0;
+
+function typeLetter(){
+
+    if(index < message.length){
+
+        document.getElementById("letterText").innerHTML +=
+        message.charAt(index)==="\n"
+        ? "<br>"
+        : message.charAt(index);
+
+        index++;
+
+        setTimeout(typeLetter,28);
+
+    }
+
+}
+
+setTimeout(typeLetter,2500);
+
+
+/* ================= MUSIC ================= */
+
+let playing=false;
+
+async function toggleMusic(){
+
+    const audio=document.getElementById("musicAudio");
+    const btn=document.getElementById("musicBtn");
+
+    if(!playing){
+
+        try{
+            await audio.play();
+            btn.innerHTML="❚❚";
+            btn.setAttribute("aria-label","Pause music");
+            btn.setAttribute("aria-pressed","true");
+            playing=true;
+        }catch(error){
+            // Browsers may block playback until the user interacts with the page.
+            btn.setAttribute("aria-label","Music unavailable");
+        }
+
+    }else{
+
+        audio.pause();
+        btn.innerHTML="♫";
+        btn.setAttribute("aria-label","Play music");
+        btn.setAttribute("aria-pressed","false");
+        playing=false;
+
+    }
+
+}
+
+document.getElementById("musicAudio").addEventListener("ended",()=>{
+    playing=false;
+});
+
+
+/* ================= YES ================= */
+
+function yesClicked(){
+
+    const popup=document.getElementById("popup");
+    popup.style.display="flex";
+    popup.setAttribute("aria-hidden","false");
+    popup.querySelector(".btn").focus();
+
+    for(let i=0;i<30;i++){
+
+        setTimeout(createHeart,i*70);
+
+    }
+
+}
+
+
+/* ================= CLOSE ================= */
+
+function closePopup(){
+
+    const popup=document.getElementById("popup");
+    popup.style.display="none";
+    popup.setAttribute("aria-hidden","true");
+    document.querySelector(".yes").focus();
+
+}
+
+document.getElementById("popup").addEventListener("click",(event)=>{
+    if(event.target.id === "popup") closePopup();
+});
+
+document.addEventListener("keydown",(event)=>{
+    const popup=document.getElementById("popup");
+    if(event.key === "Escape" && popup.style.display === "flex") closePopup();
+});
+
+
+/* ================= NO BUTTON ================= */
+
+function moveNo(){
+
+    const btn=document.getElementById("noBtn");
+    const margin=12;
+    const maxX=Math.max(margin,window.innerWidth-btn.offsetWidth-margin);
+    const maxY=Math.max(margin,window.innerHeight-btn.offsetHeight-margin);
+    const x=margin+Math.random()*(maxX-margin);
+    const y=margin+Math.random()*(maxY-margin);
+
+    btn.style.position="fixed";
+    btn.style.left=x+"px";
+    btn.style.top=y+"px";
+
+}
+
+
+/* ================= CLICK HEART ================= */
+
+document.addEventListener("click",(e)=>{
+
+    if(
+        e.target.tagName==="BUTTON" ||
+        e.target.closest(".popup")
+    ) return;
+
+    const heart=document.createElement("div");
+
+    heart.innerHTML="💗";
+
+    heart.style.position="fixed";
+    heart.style.left=e.clientX+"px";
+    heart.style.top=e.clientY+"px";
+    heart.style.pointerEvents="none";
+    heart.style.fontSize="25px";
+    heart.style.zIndex="9999";
+
+    document.body.appendChild(heart);
+
+    heart.animate([
+        {
+            transform:"translate(-50%,-50%) scale(.5)",
+            opacity:1
+        },
+        {
+            transform:"translate(-50%,-150px) scale(1.5)",
+            opacity:0
+        }
+    ],{
+        duration:900,
+        easing:"ease-out"
+    });
+
+    setTimeout(()=>heart.remove(),900);
+
+});
+
+</script>
+
+</body>
+</html>
